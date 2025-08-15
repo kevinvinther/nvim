@@ -9,6 +9,12 @@ return {
         'help',
         'neo-tree',
         'toggleterm',
+        'dapui_scopes',
+        'dapui_breakpoints',
+        'dapui_stacks',
+        'dapui_watches',
+        'dap-repl',
+        'dapui_console',
       },
       segments = {
         {
