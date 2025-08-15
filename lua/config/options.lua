@@ -87,3 +87,9 @@ vim.o.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = false
+
+-- Don't automatically change the directory
+vim.o.autochdir = false
+
+-- Set a column at 80 and 120 characters. See more in virt-column
+vim.opt.colorcolumn = '80,120'
