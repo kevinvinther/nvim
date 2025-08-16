@@ -5,7 +5,6 @@ return {
     version = '^6',
     lazy = false,
     init = function()
-      -- Global config (how rustaceanvim wants it)
       local capabilities = require('blink.cmp').get_lsp_capabilities()
 
       ---@type rustaceanvim.Opts
@@ -23,6 +22,9 @@ return {
               cargo = {
                 allFeatures = true,
                 -- set your project target dir if you want: targetDir = "target",
+              },
+              lens = {
+                enable = true,
               },
               check = { command = 'clippy' }, -- run clippy on save
               diagnostics = { enable = true },
@@ -44,7 +46,6 @@ return {
     end,
   },
 
-  -- Optional: crate/version management inside Cargo.toml
   {
     'saecki/crates.nvim',
     event = { 'BufReadPost Cargo.toml' },
