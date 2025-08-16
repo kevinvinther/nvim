@@ -200,10 +200,9 @@ return {
     -- VS Code launch.json support
     -- Maps VS Code "type" => nvim-dap adapter id
     require('dap.ext.vscode').load_launchjs(nil, {
-      go = 'delve',
-      php = 'php',
-      lldb = 'codelldb', -- VS Code CodeLLDB uses "type": "lldb"
-      -- add more when you need them (e.g. ['pwa-node'] = 'pwa-node')
+      go = { 'go' },
+      php = { 'php' },
+      lldb = { 'c', 'cpp', 'rust' },
     })
 
     -- UI
