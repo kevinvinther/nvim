@@ -48,8 +48,6 @@ return {
 
         -- === Doom-like short LSP keys ===
         if supports(client, vim.lsp.protocol.Methods.textDocument_codeAction, event.buf) then
-          map('ca', vim.lsp.buf.code_action, 'Code Action')
-          map('ca', vim.lsp.buf.code_action, 'Code Action (range)', 'v')
           map('<leader>la', vim.lsp.buf.code_action, '[A]ction')
           map('<leader>la', vim.lsp.buf.code_action, '[A]ction (range)', 'v')
         end
